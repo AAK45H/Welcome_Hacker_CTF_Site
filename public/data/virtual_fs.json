@@ -1,0 +1,119 @@
+{
+  "filesystem": {
+    "/": {
+      "type": "directory",
+      "name": "/",
+      "children": [
+        {
+          "type": "directory",
+          "name": "home",
+          "children": [
+            {
+              "type": "directory",
+              "name": "user",
+              "children": [
+                {
+                  "type": "directory",
+                  "name": "admin",
+                  "children": [
+                    {
+                      "type": "directory",
+                      "name": "secret",
+                      "children": [
+                        {
+                          "type": "file",
+                          "name": "flag.txt",
+                          "content": "FL4G{7H3_53CR37_15_4LW4Y5_51MPL3}",
+                          "hidden": true,
+                          "permissions": "read-only"
+                        },
+                        {
+                          "type": "file",
+                          "name": "key.log",
+                          "content": "[2026-08-25] Generated encryption key: SK-ABC123...\n[2026-08-26] Key rotation completed successfully.\nThe file you are looking for might be hidden.\nUse proper commands to get the flag.\n",
+                          "permissions": "read-only"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "file",
+              "name": "readme.txt",
+              "content": "Welcome to your personal terminal.\nUse commands like ls, cd, cat, pwd to navigate.\nType 'help' for available commands.\n\nDirectory structure: Kali Type.\n",
+              "permissions": "read-only"
+            },
+            {
+              "type": "file",
+              "name": "notes.txt",
+              "content": "Today's tasks:\n- Review security logs\n- Find Hidden Files\n- Analyze system performance\n- Organize backup files\n\nPasswords are stored in /etc/passwords\nGet the flag from the secret directory!\n",
+              "permissions": "read-only"
+            },
+            {
+              "type": "file",
+              "name": ".bashrc",
+              "content": "# Personal bashrc settings\nalias ls='list_files'\nalias cd='change_dir'\nalias cat='view_file'\nalias pwd='print_working_dir'\nalias help='show_help'\n\n# Security note: Never share your password\n",
+              "permissions": "read-only"
+            }
+          ]
+        },
+        {
+          "type": "directory",
+          "name": "etc",
+          "children": [
+            {
+              "type": "file",
+              "name": "passwd",
+              "content": "root:x:0:0:root:/root:/bin/bash\nuser:x:1000:1000:User,,,:/home/user:/bin/bash\nadmin:x:1001:1001:Admin,,,:/home/admin:/bin/bash\n",
+              "permissions": "read-only"
+            },
+            {
+              "type": "file",
+              "name": "passwords",
+              "content": "root: supersecretrootpassword\nuser: userpassword123\nadmin: adminpassword456\n",
+              "permissions": "read-only"
+            },
+            {
+              "type": "file",
+              "name": "config.cfg",
+              "content": "[Settings]\nversion=1.0\nupdate_interval=30\nlog_level=debug\n",
+              "permissions": "read-only"
+            },
+            {
+              "type": "file",
+              "name": "network.conf",
+              "content": "[Network]\nip_address=127.0.0.1\nsubnet_mask=24\ngateway=127.0.0.1\n",
+              "permissions": "read-only"
+            }
+          ]
+        },
+        {
+          "type": "directory",
+          "name": "var",
+          "children": [
+            {
+              "type": "file",
+              "name": "log",
+              "content": "2026-01-15 08:22:14 Service started\n2026-02-20 14:11:32 Backup completed\n2026-03-10 02:45:10 Security check passed\n",
+              "permissions": "read-only"
+            }
+          ]
+        },
+        {
+          "type": "directory",
+          "name": "opt",
+          "children": [
+            {
+              "type": "file",
+              "name": "README.md",
+              "content": "Optional software packages available:\n- Hacker Tools Suite\n- System Utilities\n- Network Scanners\n",
+              "permissions": "read-only"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

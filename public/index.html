@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello Hacker!!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Matrix Rain Canvas -->
+    <canvas id="matrixCanvas"></canvas>
+
+    <!-- Floating Particles -->
+    <div class="particles" id="particles"></div>
+
+    <!-- Grid Overlay -->
+    <div class="grid-overlay"></div>
+
+    <!-- Scanlines -->
+    <div class="scanlines"></div>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Top Bar -->
+        <div class="top-bar">
+            <div class="logo">
+                <span class="logo-bracket">&lt;</span>
+                <span class="logo-text">HACKER</span>
+                <span class="logo-slash">/</span>
+                <span class="logo-bracket">&gt;</span>
+            </div>
+            <div class="status-indicators">
+                <div class="indicator">
+                    <span class="indicator-dot pulse"></span>
+                    <span>SYSTEM ONLINE</span>
+                </div>
+                <div class="indicator">
+                    <span class="indicator-dot pulse"></span>
+                    <span>SECURE CONNECTION</span>
+                </div>
+            </div>
+            <div class="terminal-launcher">
+                <a href="/terminal" class="terminal-link">
+                    <span class="terminal-icon">🖥️</span>
+                    <span>TERMINAL</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <div class="terminal-window">
+                    <div class="terminal-header">
+                        <div class="terminal-buttons">
+                            <span class="terminal-btn red"></span>
+                            <span class="terminal-btn yellow"></span>
+                            <span class="terminal-btn green"></span>
+                        </div>
+                        <span class="terminal-title">root@hacker:~</span>
+                    </div>
+                    <div class="terminal-body">
+                        <div class="command-line">
+                            <span class="prompt">root@hacker:~$</span>
+                            <span class="command typing-effect">./welcome.sh</span>
+                        </div>
+                        <div class="output-container">
+                            <pre class="ascii-art">
+ ██╗  ██╗ █████╗  ██████╗██╗  ██╗███████╗██████╗
+ ██║  ██║██╔══██╗██╔════╝██║ ██╔╝██╔════╝██╔══██╗
+ ███████║███████║██║     █████╔╝ █████╗  ██████╔╝
+ ██╔══██║██╔══██║██║     ██╔═██╗ ██╔══╝  ██╔══██╗
+ ██║  ██║██║  ██║╚██████╗██║  ██╗███████╗██║  ██║
+ ╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝
+                            </pre>
+                            <div class="main-message glitch" data-text="HELLO HACKER!!">
+                                <span class="glitch-text">HELLO HACKER!!</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Dashboard -->
+        <section class="dashboard">
+            <div class="dashboard-header">
+                <h2 class="dashboard-title">
+                    <span class="title-icon">◈</span>
+                    SYSTEM METRICS
+                    <span class="title-icon">◈</span>
+                </h2>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-card glass-card">
+                    <div class="stat-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                            <path d="M2 17l10 5 10-5M2 12l10 5 10-5"/>
+                        </svg>
+                    </div>
+                    <div class="stat-content">
+                        <span class="stat-label">ACTIVE CONNECTIONS</span>
+                        <span class="stat-value" id="connections">----</span>
+                    </div>
+                    <div class="stat-bar">
+                        <div class="stat-bar-fill" style="width: 78%"></div>
+                    </div>
+                </div>
+
+                <div class="stat-card glass-card">
+                    <div class="stat-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                            <line x1="8" y1="21" x2="16" y2="21"/>
+                            <line x1="12" y1="17" x2="12" y2="21"/>
+                        </svg>
+                    </div>
+                    <div class="stat-content">
+                        <span class="stat-label">DATA PACKETS</span>
+                        <span class="stat-value" id="packets">------</span>
+                    </div>
+                    <div class="stat-bar">
+                        <div class="stat-bar-fill" style="width: 65%"></div>
+                    </div>
+                </div>
+
+                <div class="stat-card glass-card">
+                    <div class="stat-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <polyline points="12 6 12 12 16 14"/>
+                        </svg>
+                    </div>
+                    <div class="stat-content">
+                        <span class="stat-label">UPTIME (HOURS)</span>
+                        <span class="stat-value" id="uptime">---</span>
+                    </div>
+                    <div class="stat-bar">
+                        <div class="stat-bar-fill" style="width: 92%"></div>
+                    </div>
+                </div>
+
+                <div class="stat-card glass-card">
+                    <div class="stat-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                        </svg>
+                    </div>
+                    <div class="stat-content">
+                        <span class="stat-label">BANDWIDTH (GB/s)</span>
+                        <span class="stat-value" id="bandwidth">--.-</span>
+                    </div>
+                    <div class="stat-bar">
+                        <div class="stat-bar-fill" style="width: 83%"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quote Section -->
+        <section class="quote-section">
+            <div class="quote-container glass-card">
+                <div class="quote-icon">"</div>
+                <blockquote id="quote-text" class="quote-text">
+                    Loading wisdom...
+                </blockquote>
+                <cite id="quote-author" class="quote-author">— Anonymous</cite>
+                <button class="refresh-btn" onclick="fetchQuote()">
+                    <span class="btn-icon">↻</span>
+                    <span>New Quote</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Terminal Commands Section -->
+        <section class="commands-section">
+            <div class="commands-container glass-card">
+                <div class="terminal-mini-header">
+                    <span class="prompt-mini">root@hacker:~$</span>
+                    <span class="cursor">█</span>
+                </div>
+                <div class="command-list">
+                    <div class="cmd-item">
+                        <span class="cmd-name">whoami</span>
+                        <span class="cmd-desc">Display current user identity</span>
+                    </div>
+                    <div class="cmd-item">
+                        <span class="cmd-name">ls -la</span>
+                        <span class="cmd-desc">List all files with details</span>
+                    </div>
+                    <div class="cmd-item">
+                        <span class="cmd-name">nmap -sV</span>
+                        <span class="cmd-desc">Service version detection scan</span>
+                    </div>
+                    <div class="cmd-item">
+                        <span class="cmd-name">netstat -an</span>
+                        <span class="cmd-desc">Network connections and ports</span>
+                    </div>
+                    <div class="cmd-item">
+                        <span class="cmd-name">grep -r "flag"</span>
+                        <span class="cmd-desc">Search for flag patterns</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Terminal Access Section -->
+        <section class="terminal-access-section">
+            <a href="/terminal" class="terminal-access-inline glass-card">
+                <div class="access-visual">
+                    <div class="mini-terminal">
+                        <div class="mini-terminal-header">
+                            <span class="mini-dot red"></span>
+                            <span class="mini-dot yellow"></span>
+                            <span class="mini-dot green"></span>
+                        </div>
+                        <div class="mini-terminal-body">
+                            <div class="mini-line"><span class="mini-prompt">root@hacker:~$</span> <span class="mini-cmd">ls</span></div>
+                            <div class="mini-line output">flag.txt</div>
+                            <div class="mini-line"><span class="mini-prompt">root@hacker:~$</span> <span class="mini-cmd">cat flag.txt</span></div>
+                            <div class="mini-line output flag-line">FL4G{W3LC0M3_T0_7H3_V1RTU4L_73RM1N4L}</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="access-info">
+                    <span class="access-tag">FEATURE</span>
+                    <h3 class="access-title">Virtual Terminal</h3>
+                    <p class="access-desc">Practice Linux commands in a secure, sandboxed environment. Navigate a virtual filesystem, search for hidden flags, and master the command line.</p>
+                    <div class="access-features-inline">
+                        <span class="feature-chip"><svg viewBox="0 0 16 16" fill="currentColor"><path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.75.75 0 0 1 1.06-1.06L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"/></svg> Virtual FS</span>
+                        <span class="feature-chip"><svg viewBox="0 0 16 16" fill="currentColor"><path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.75.75 0 0 1 1.06-1.06L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"/></svg> Tab Complete</span>
+                        <span class="feature-chip"><svg viewBox="0 0 16 16" fill="currentColor"><path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.75.75 0 0 1 1.06-1.06L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"/></svg> Hidden Flag</span>
+                        <span class="feature-chip"><svg viewBox="0 0 16 16" fill="currentColor"><path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.75.75 0 0 1 1.06-1.06L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"/></svg> Safe</span>
+                    </div>
+                </div>
+                <div class="access-cta">
+                    <span class="cta-text">Launch Terminal</span>
+                    <svg class="cta-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </div>
+            </a>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <span class="encrypted-text">
+                        <span class="char">H</span>
+                        <span class="char">e</span>
+                        <span class="char">l</span>
+                        <span class="char">l</span>
+                        <span class="char">o</span>
+                        <span class="char">&nbsp;</span>
+                        <span class="char">H</span>
+                        <span class="char">a</span>
+                        <span class="char">c</span>
+                        <span class="char">k</span>
+                        <span class="char">e</span>
+                        <span class="char">r</span>
+                        <span class="char">!</span>
+                        <span class="char">!</span>
+                    </span>
+                </div>
+                <div class="footer-info">
+                    <span>Built by SkyVolt - For CTF Competitions</span>
+                    <span class="separator">|</span>
+                    <span>© 2026 Hacker Terminal</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

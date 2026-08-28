@@ -1,0 +1,14 @@
+{
+  "name": "hello-hacker",
+  "version": "1.0.0",
+  "description": "Premium hacker-themed website",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "compression": "^1.8.1",
+    "express": "^4.18.2"
+  }
+}

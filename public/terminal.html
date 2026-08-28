@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terminal Access - Hello Hacker!!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="terminal.css">
+</head>
+<body>
+    <!-- Matrix Rain Canvas -->
+    <canvas id="matrixCanvas"></canvas>
+
+    <!-- Floating Particles -->
+    <div class="particles" id="particles"></div>
+
+    <!-- Grid Overlay -->
+    <div class="grid-overlay"></div>
+
+    <!-- Scanlines -->
+    <div class="scanlines"></div>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Top Bar -->
+        <div class="top-bar">
+            <a href="/" class="logo-link">
+                <div class="logo">
+                    <span class="logo-bracket"><</span>
+                    <span class="logo-text">HACKER</span>
+                    <span class="logo-slash">/</span>
+                    <span class="logo-bracket">></span>
+                </div>
+            </a>
+            <div class="status-indicators">
+                <div class="indicator">
+                    <span class="indicator-dot pulse"></span>
+                    <span>SECURE SESSION</span>
+                </div>
+                <div class="indicator">
+                    <span class="indicator-dot pulse"></span>
+                    <span>VIRTUAL FS LOADED</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Terminal Area -->
+        <div class="terminal-area">
+            <div class="terminal-container">
+                <div class="terminal-header">
+                    <div class="terminal-buttons">
+                        <span class="terminal-btn red"></span>
+                        <span class="terminal-btn yellow"></span>
+                        <span class="terminal-btn green"></span>
+                    </div>
+                    <div class="terminal-title-bar">
+                        <span class="terminal-title">root@hacker:~</span>
+                        <span class="connection-status">SECURE SESSION</span>
+                    </div>
+                </div>
+                <div class="terminal-body" id="terminalBody">
+                    <div class="welcome-banner">
+                        <pre class="ascii-banner">████████╗███████╗██████╗ ███╗   ███╗██╗███╗   ██╗ █████╗ ██╗     
+╚══██╔══╝██╔════╝██╔══██╗████╗ ████║██║████╗  ██║██╔══██╗██║     
+   ██║   █████╗  ██████╔╝██╔████╔██║██║██╔██╗ ██║███████║██║     
+   ██║   ██╔══╝  ██╔══██╗██║╚██╔╝██║██║██║╚██╗██║██╔══██║██║     
+   ██║   ███████╗██║  ██║██║ ╚═╝ ██║██║██║ ╚████║██║  ██║███████╗
+   ╚═╝   ╚══════╝╚═╝  ╚═╝╚═╝     ╚═╝╚═╝╚═╝  ╚═══╝╚═╝  ╚═╝╚══════╝</pre>
+                        <p class="banner-text">Virtual Linux Terminal - Practice Commands Safely</p>
+                        <div class="command-hint">
+                            <span>ls, cd, cat</span>
+                            <span>pwd, help</span>
+                            <span>clear, whoami</span>
+                        </div>
+                    </div>
+                    <div class="output-area" id="outputArea"></div>
+                    <div class="input-line">
+                        <span class="prompt" id="promptDisplay">root@hacker:~$</span>
+                        <input type="text" class="terminal-input" id="terminalInput" autocomplete="off" spellcheck="false" autocapitalize="off" autocorrect="off" placeholder="Type a command...">
+                        <span class="cursor-blink"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Command Reference Sidebar -->
+        <aside class="reference-sidebar">
+            <div class="sidebar-card">
+                <div class="sidebar-header">
+                    <h3 class="sidebar-title">
+                        <span class="title-icon">◈</span>
+                        COMMAND REFERENCE
+                        <span class="title-icon">◈</span>
+                    </h3>
+                </div>
+                <div class="command-list">
+                    <div class="ref-item">
+                        <span class="ref-cmd">ls [path]</span>
+                        <span class="ref-desc">List directory contents</span>
+                    </div>
+                    <div class="ref-item">
+                        <span class="ref-cmd">cd [path]</span>
+                        <span class="ref-desc">Change directory</span>
+                    </div>
+                    <div class="ref-item">
+                        <span class="ref-cmd">cat [file]</span>
+                        <span class="ref-desc">View file contents</span>
+                    </div>
+                    <div class="ref-item">
+                        <span class="ref-cmd">pwd</span>
+                        <span class="ref-desc">Print working directory</span>
+                    </div>
+                    <div class="ref-item">
+                        <span class="ref-cmd">help</span>
+                        <span class="ref-desc">Show this help</span>
+                    </div>
+                    <div class="ref-item">
+                        <span class="ref-cmd">clear</span>
+                        <span class="ref-desc">Clear terminal</span>
+                    </div>
+                    <div class="ref-item">
+                        <span class="ref-cmd">whoami</span>
+                        <span class="ref-desc">Display current user</span>
+                    </div>
+                </div>
+                <div class="sidebar-footer">
+                    <p class="hint-text">The flag is hidden somewhere in the filesystem...</p>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <script src="terminal.js"></script>
+</body>
+</html>
