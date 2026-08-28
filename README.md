@@ -11,6 +11,6 @@ They say secrets are meant to be found... if you know where to look.
 
 Flag format: FL4G{...}
 
-link to the site: [welcm-h4cker.vercel.app]
+link to the site: https://welcm-h4cker.vercel.app/
 
 --------------------------------------------------------------------------------
