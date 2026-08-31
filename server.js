@@ -62,12 +62,12 @@ function getSanitizedFS() {
 app.get('/api/quote', (req, res) => {
     const quotes = [
         { text: "The only truly secure system is one that is powered off, cast in a block of concrete and sealed in a lead-lined room with armed guards.", author: "Hacker" },
-        { text: "In a world of locked rooms, the man with the key is king.", author: "Anonymous" },
+        { text: "In a world of locked rooms, the man with the key is king.", author: "SkyVolt" },
         { text: "It's not a bug, it's an undocumented feature.", author: "Anonymous" },
         { text: "The best way to predict the future is to invent it.", author: "SkyVolt" },
         { text: "Any sufficiently advanced technology is indistinguishable from magic.", author: "Yagami" },
         { text: "First, solve the problem. Then, write the code.", author: "Lynx" },
-        { text: "Code is like humor. When you have to explain it, it's bad.", author: "Mhmd" },
+        { text: "Code is like humor. When you have to explain it, it's bad.", author: "Lunar" },
         { text: "In theory, there is no difference between theory and practice. In practice, there is.", author: "S.S.Nair" }
     ];
 
